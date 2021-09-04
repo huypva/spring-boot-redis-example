@@ -9,7 +9,7 @@ The example project for StringBoot service
 ## Project structure
 ```
 .
-├── hello-world
+├── spring-boot-redisson
 │   ├── Dockerfile
 │   ...
 ├── docker-compose.yaml

@@ -1,10 +1,10 @@
-package io.codebyexample.helloworld;
+package io.codebyexample.springbootredisson;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HelloworldApplicationTests {
+class SpringBootRedissonApplicationTests {
 
 	@Test
 	void contextLoads() {
