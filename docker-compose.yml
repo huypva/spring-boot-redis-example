@@ -1,9 +1,23 @@
-version: "3.4"
+version: "2"
 services:
-  hello-world:
-    build: hello-world
-    container_name: 'hello-world'
+  spring-boot-redisson:
+    build: spring-boot-redisson
+    container_name: 'spring-boot-redisson'
     environment:
       - spring_profiles_active=docker
+      - REDIS_HOST=redis
     ports:
       - 8081:8081
+    depends_on:
+      - redis
+    networks:
+      - redis-network
+  redis:
+    image: "redis:alpine"
+    container_name: 'redis'
+    ports:
+      - 6379:6379
+    networks:
+      - redis-network
+networks:
+  redis-network:

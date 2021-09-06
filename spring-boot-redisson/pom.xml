@@ -11,24 +11,61 @@
 	</parent>
 
 	<groupId>io.codebyexample</groupId>
-	<artifactId>hello-world</artifactId>
+	<artifactId>spring-boot-redisson</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Hello World</name>
-	<description>Example project for Spring Boot</description>
+	<name>Redisson</name>
 
 	<properties>
+
+		<testcontainers.version>1.15.3</testcontainers.version>
+
 		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
+		<!--spring mvn, rest-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!--spring redisson starter-->
+		<dependency>
+			<groupId>org.redisson</groupId>
+			<artifactId>redisson-spring-boot-starter</artifactId>
+			<version>3.16.1</version>
 		</dependency>
 
 		<dependency>
+			<artifactId>lombok</artifactId>
+			<groupId>org.projectlombok</groupId>
+			<optional>true</optional>
+		</dependency>
+
+
+		<!--Unit test-->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>${testcontainers.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>testcontainers</artifactId>
+			<version>${testcontainers.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.testcontainers/mysql -->
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>mysql</artifactId>
+			<version>${testcontainers.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
