@@ -25,6 +25,7 @@ The example project for StringBoot service
     [Docker Compose](https://github.com/docker/compose)
 
 ## Start project
+### Start project in local
 
 - Install & start [redis](https://redis.io/)
 
@@ -42,9 +43,7 @@ $ mvn spring-boot:run
 2021-09-07 10:54:35.172  INFO 3909 --- [           main] i.c.s.SpringBootRedissonApplication      : Started SpringBootRedissonApplication in 6.177 seconds (JVM running for 7.102)
 ```
 
-## Start project in local
-
-## Start project in docker 
+### Start project in docker 
 
 - Start project
 
@@ -59,7 +58,7 @@ docker-compose down
 ```
 
 
-## Send some request & test
+## Send request & test
 
 ```shell script
 $ curl http://localhost:8081/api/set?key=k1&value=v1
