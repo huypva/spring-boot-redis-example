@@ -4,5 +4,6 @@ spring:
   application:
     name: "spring-boot-redisson-example"
   redis:
+    host: 127.0.0.2
     redisson:
       file: classpath:redisson-test.yml

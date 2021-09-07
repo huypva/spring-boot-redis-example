@@ -36,6 +36,8 @@ public class ExampleServiceImplTest {
       assertEquals("v1", arg1);
       return null;
     }).when(exampleRedisClientImpl).setExample("k1", "v1");
+
+    exampleService.setRedis("k1", "v1");
   }
 
   @Test
