@@ -4,7 +4,8 @@ COPY pom.xml /workdir/spring-boot-redisson/pom.xml
 RUN mvn dependency:go-offline
 
 COPY src /workdir/spring-boot-redisson/src
-RUN mvn -DskipTests=true install
+RUN mvn clean install
+#-DskipTests=true
 RUN mkdir  -p target/depency
 WORKDIR /workdir/spring-boot-redisson/target/dependency
 RUN jar -xf ../*.jar
